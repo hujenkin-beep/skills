@@ -1,146 +1,146 @@
 ---
 name: wechat-miniapp-name-generator
-description: Generate Chinese WeChat mini program names from a product background, basic functions, target users, and the problem being solved. Use when the user provides what a mini program does and wants name candidates, keyword-first searchable names, short-name suggestions, intro copy, or compliance checks against WeChat naming constraints. Also use when renaming or auditing an existing mini program name.
+description: 根据产品背景、基础功能、目标用户和要解决的问题，生成中文微信小程序名称。适用于用户说明小程序用途，并需要候选名称、关键词前置的可搜索名称、简称建议、简介文案，或需要按微信命名约束做合规检查的场景；也适用于重命名或评估已有小程序名称。
 ---
 
-# WeChat Mini Program Name Generator
+# 微信小程序起名生成器
 
-## Core Principle
+## 核心原则
 
-Treat a mini program name as a WeChat search SEO decision, not as a brand slogan. Prefer names that make the function, action, and user search keyword obvious at first glance.
+把小程序名称当作微信搜索优化决策，而不是品牌口号。优先选择能让用户一眼看出功能、动作和搜索关键词的名称。
 
-Use this hierarchy:
+按以下优先级判断：
 
-1. WeChat compliance and uniqueness
-2. Search keyword clarity
-3. Action or scenario clarity
-4. Distinctiveness and brand feel
+1. 微信合规性和名称唯一性
+2. 搜索关键词清晰度
+3. 动作或场景清晰度
+4. 差异化和品牌感
 
-If a poetic, cute, or brand-style name hides what the mini program does, recommend replacing or appending it with high-frequency functional keywords. Balance this with official naming rules: avoid pure generic category words, keyword stuffing, commercial hype, and meaningless symbols added only to bypass review.
+如果一个诗意、可爱或品牌化的名称掩盖了小程序真实功能，建议替换为高频功能关键词，或在名称中补充这些关键词。同时兼顾官方命名规则：避免纯泛类目词、关键词堆砌、商业夸张表达，以及只为绕过审核而添加的无意义符号。
 
-## Input Handling
+## 输入处理
 
-Expect the user to provide some combination of:
+预期用户会提供以下信息中的一部分：
 
-- Product background: why the mini program exists and what scenario it serves.
-- Basic functions: what users can do inside it.
-- Problem solved: the pain, task, or outcome the mini program addresses.
-- Target users or usage scenes: who uses it and when.
-- Optional constraints: brand word, tone, industry, existing name, unavailable names, or desired keywords.
+- 产品背景：小程序为什么存在，服务什么场景。
+- 基础功能：用户可以在小程序里完成什么操作。
+- 解决的问题：对应的痛点、任务或目标结果。
+- 目标用户或使用场景：谁在什么情况下使用。
+- 可选约束：品牌词、语气、行业、已有名称、不可用名称或期望关键词。
 
-If at least the function and problem can be inferred, generate names directly. Ask one concise clarification only when the function or solved problem is genuinely unclear. Do not require the user to provide an existing name.
+只要能推断出功能和要解决的问题，就直接生成名称。只有在功能或问题确实不清楚时，才提出一个简短的澄清问题。不要要求用户必须提供已有名称。
 
-## Workflow
+## 工作流程
 
-1. Restate the mini program's job-to-be-done in one sentence from the background, functions, and solved problem.
-2. Infer target users and the words they would type in WeChat Search, WeChat Sou Yi Sou, Xiaohongshu, Douyin, Baidu, or the main community for that niche.
-3. Identify the naming strategy before generating:
-   - Tool/action-led: best for utilities and single-purpose tools.
-   - Scenario-led: best when the usage context is more searchable than the function.
-   - Audience-led: best when a specific user group searches by identity or role.
-   - Brand-plus-keyword: best when the user already has a brand word that should be retained.
-4. Build a keyword map:
-   - Core noun: the category users search, such as `图片`, `热量`, `去水印`, `纳指`.
-   - Action verb: what the mini program does, such as `生成`, `识别`, `查询`, `去除`, `记录`.
-   - Scenario modifier: when or where it is used, such as `聚会`, `喝酒`, `睡眠`, `股票`.
-   - Problem/outcome word: the result users want, such as `省钱`, `避坑`, `戒烟`, `提效`, `提醒`.
-   - Long-tail variants: common synonyms, abbreviations, English terms, and user slang.
-5. Generate at least 10 candidate names with the core keyword placed first whenever possible.
-6. Remove names that conflict with the official-rule snapshot below.
-7. Score and rank candidates using the checklist below.
-8. Provide short-name candidates for the strongest full names when useful.
-9. Provide a concise intro draft that clearly reflects the core function and naturally covers long-tail keywords.
-10. Tell the user what to verify in the WeChat mini program backend before submission.
+1. 根据背景、功能和要解决的问题，用一句话重述小程序的用户任务。
+2. 推断目标用户，以及他们可能在微信搜索、微信搜一搜、小红书、抖音、百度或垂直社区中输入的词。
+3. 先确定命名策略，再开始生成：
+   - 工具/动作主导：适合工具类和单一功能小程序。
+   - 场景主导：适合使用场景比功能本身更容易被搜索的产品。
+   - 人群主导：适合特定用户群会按身份或角色搜索的产品。
+   - 品牌加关键词：适合用户已有需要保留的品牌词。
+4. 建立关键词地图：
+   - 核心名词：用户会搜索的类目，例如 `图片`、`热量`、`去水印`、`纳指`。
+   - 动作动词：小程序做的事，例如 `生成`、`识别`、`查询`、`去除`、`记录`。
+   - 场景修饰词：使用时间或地点，例如 `聚会`、`喝酒`、`睡眠`、`股票`。
+   - 问题/结果词：用户想获得的结果，例如 `省钱`、`避坑`、`戒烟`、`提效`、`提醒`。
+   - 长尾变体：常见同义词、缩写、英文词和用户黑话。
+5. 生成至少 10 个候选名称，尽量把核心关键词放在开头。
+6. 删除与下方官方规则快照冲突的名称。
+7. 使用评估清单为候选名称打分并排序。
+8. 对最强的完整名称，在有用时提供简称候选。
+9. 提供一段简洁简介文案，清楚反映核心功能，并自然覆盖长尾关键词。
+10. 告诉用户提交前需要在微信小程序后台核验哪些事项。
 
-When the user gives an existing name, include a brief diagnosis. When they only give background and functions, skip diagnosis and focus on generation.
+当用户提供已有名称时，包含简短诊断。当用户只提供背景和功能时，跳过诊断，专注生成名称。
 
-## Name Patterns
+## 命名模式
 
-Prefer specific, recognizable structures:
+优先使用具体、易识别的结构：
 
-- `核心关键词 + 动作`: `热量识别`, `水印去除`, `拼豆图纸生成`
-- `核心关键词 + 动作 + 场景`: `骰子摇一摇聚会喝酒`, `热量识别拍照记卡路里`
-- `用户搜索词 + 工具`: `纳指恐慌贪婪指数`, `图片去水印工具`
-- `长尾关键词 + 品牌尾缀`: `去水印黑熊工具`, `拼豆图纸Pic生成`
+- `核心关键词 + 动作`：`热量识别`、`水印去除`、`拼豆图纸生成`
+- `核心关键词 + 动作 + 场景`：`骰子摇一摇聚会喝酒`、`热量识别拍照记卡路里`
+- `用户搜索词 + 工具`：`纳指恐慌贪婪指数`、`图片去水印工具`
+- `长尾关键词 + 品牌尾缀`：`去水印黑熊工具`、`拼豆图纸Pic生成`
 
-Use brand words as suffixes or secondary variants unless the brand already has demand. Do not lead with obscure names like `时光星球`, `旺你开心`, or `鼾眠伴侣` unless the next words immediately explain the function. Do not propose broad one-word or low-recognition names such as `电话`, `日历`, `图片`, `工具`, or `查询` by themselves.
+除非品牌词本身已有搜索需求，否则把品牌词作为后缀或备选版本。不要用 `时光星球`、`旺你开心`、`鼾眠伴侣` 这类含义不明的词开头，除非紧接着能解释功能。不要单独提出 `电话`、`日历`、`图片`、`工具`、`查询` 这类宽泛、低识别度的一词名称。
 
-## Official Rules Snapshot
+## 官方规则快照
 
-Apply these public WeChat/Tencent rules before ranking SEO quality. Treat them as review-risk filters, and tell the user to confirm final availability in the WeChat public platform backend.
+在排序搜索质量之前，先应用这些公开的微信/腾讯规则。把它们视为审核风险过滤器，并提醒用户最终仍需在微信公众平台后台确认可用性。
 
-- Name format: mini program names may use Chinese, numbers, English, spaces, and some special symbols; length is 4-30 characters, with one Chinese character counted as 2 characters.
-- Uniqueness: official accounts and mini programs are unique on the WeChat public platform. A mini program may use the same name as an official account only when they belong to the same subject; it must not use the same name as an official account under a different subject. Same-subject same-name permission is not an audit exemption: the name can still be rejected if it violates platform operation rules.
-- Short name: the short name is created by taking characters from the full mini program name in order; length is 4-10 characters, with one Chinese character counted as 2 characters. Short names are not unique, but imitation or infringement can still be punished.
-- Protected terms: if a name or short name hits protected words, additional review is required; Tencent customer service states the review time is within 7 working days.
-- Rename limits: mainland accounts can change the mini program name 2 times per calendar year; overseas accounts have 2 pre-release name changes and generally need WeChat certification after release.
-- Old-name release: after a published account is renamed successfully, the old name has a 2-day protection period; during that period, only the same subject can use it if uniqueness rules are met.
-- Basic information consistency: the name, icon, intro, and description must be related to each other; the intro and description must clearly describe the function, accurately reflect the core experience, and stay current.
-- Rights and sensitive content: the name, icon, intro, and description must not contain illegal or sensitive content, nor unauthorized trademarks, brand marks, similar marks, special badges, portraits, names, or other rights-infringing content.
-- Search-interference ban: do not mix in commercialized language, popular app or mini program names, popular slogans, unrelated words, or superlatives such as `国家级` and `最高级` to interfere with search results.
-- Generic-word ban: do not use broad, common, low-recognition category words such as `电话`, `邮件`, `日历`, `斗地主`, or `麻将` as the name in a way that interferes with search results.
-- Confusion and bypass ban: without a proper reason, do not make the name, intro, or description duplicate or confuse users with existing mini programs or official accounts; do not add meaningless letters or symbols to work around platform rules.
-- Functional consistency: the actual service, homepage core function, category, tags, intro, and name should align. Do not name for a function that is hidden, absent, or only available after jumping elsewhere.
+- 名称格式：小程序名称可使用中文、数字、英文、空格和部分特殊符号；长度为 4-30 个字符，其中 1 个汉字按 2 个字符计算。
+- 唯一性：公众号和小程序在微信公众平台内名称唯一。只有同一主体的小程序才可以和该主体公众号同名；不得与其他主体的公众号同名。同主体同名权限不等于审核豁免，名称如果违反平台运营规则仍可能被拒。
+- 简称：简称从完整小程序名称中按顺序截取字符生成；长度为 4-10 个字符，其中 1 个汉字按 2 个字符计算。简称不要求唯一，但仿冒或侵权仍可能被处罚。
+- 保护词：名称或简称命中保护词时需要补充审核；腾讯客服说明审核时间为 7 个工作日内。
+- 改名次数：大陆账号每个自然年可修改小程序名称 2 次；海外账号发布前通常有 2 次改名机会，发布后一般需要微信认证。
+- 旧名称释放：已发布账号改名成功后，旧名称有 2 天保护期；保护期内只有同主体在满足唯一性规则时可以使用。
+- 基本信息一致性：名称、头像、简介和描述必须相互关联；简介和描述必须清楚说明功能，准确反映核心体验，并保持最新。
+- 权利和敏感内容：名称、头像、简介和描述不得包含违法或敏感内容，也不得包含未经授权的商标、品牌标识、相似标识、特殊徽章、肖像、姓名或其他侵权内容。
+- 搜索干扰禁令：不要混入商业化语言、热门应用或小程序名称、热门口号、无关词，或 `国家级`、`最高级` 等最高级表达来干扰搜索结果。
+- 泛词禁令：不要用 `电话`、`邮件`、`日历`、`斗地主`、`麻将` 这类宽泛、常见、低识别度类目词作为干扰搜索结果的名称。
+- 混淆和绕过禁令：无正当理由时，不要让名称、简介或描述与已有小程序或公众号重复并造成混淆；不要添加无意义字母或符号来绕过平台规则。
+- 功能一致性：实际服务、首页核心功能、类目、标签、简介和名称应保持一致。不要用隐藏、缺失或只能跳转后才能使用的功能来命名。
 
-Useful source links:
+有用的来源链接：
 
-- Tencent Customer Service: `https://kf.qq.com/faq/170109umMvm6170109MZNnYV.html`
-- WeChat Mini Program Platform Operation Specification: `https://developers.weixin.qq.com/miniprogram/product/`
+- 腾讯客服：`https://kf.qq.com/faq/170109umMvm6170109MZNnYV.html`
+- 微信小程序平台运营规范：`https://developers.weixin.qq.com/miniprogram/product/`
 
-## Evaluation Checklist
+## 评估清单
 
-Score each candidate from 1 to 5 on:
+每个候选名称按 1-5 分评分：
 
-- Keyword front-loading: the highest-intent search term appears at the beginning and is continuous.
-- Action clarity: the user can tell what the tool does without explanation.
-- Search intent match: the name uses words target users actually search.
-- Long-tail coverage: synonyms, abbreviations, and scene words are included without awkward stuffing.
-- Compliance risk: follows the official-rule snapshot and has no obvious red-line terms.
-- Differentiation: avoids being too generic while still searchable.
+- 关键词前置：最高意图的搜索词出现在开头，并且连续。
+- 动作清晰：用户不需要解释就能看出工具做什么。
+- 搜索意图匹配：名称使用目标用户真实会搜索的词。
+- 长尾覆盖：自然包含同义词、缩写和场景词，不生硬堆砌。
+- 合规风险：符合官方规则快照，没有明显红线词。
+- 差异化：避免过于泛化，同时仍然容易被搜索。
 
-Reject or flag names that:
+拒绝或标记以下名称：
 
-- Need strong imagination to understand.
-- Lead with a metaphor, mascot, emotion, or abstract brand word.
-- Use only broad category nouns without a clear action when the product is a specific tool.
-- Hide the useful keyword in the middle or end.
-- Depend on pinyin, English, or abbreviations users may not search.
-- Stuff popular keywords, app names, slogans, or meaningless symbols to manipulate search.
+- 需要用户强行联想才能理解。
+- 以隐喻、吉祥物、情绪词或抽象品牌词开头。
+- 产品明明是具体工具，却只使用宽泛类目名，没有明确动作。
+- 把有用关键词藏在中间或末尾。
+- 依赖用户可能不会搜索的拼音、英文或缩写。
+- 堆砌热门关键词、应用名称、口号或无意义符号来操纵搜索。
 
-## WeChat Naming Constraints
+## 微信命名约束
 
-Warn the user to verify in the WeChat backend before finalizing:
+定稿前提醒用户在微信后台核验：
 
-- Infringing, protected, or confusing brand terms such as `微信`, `腾讯`, `抖音`, `Tencent`, `WeChat`, `QQ`, or names of major platforms, unless the user has clear rights or authorization.
-- Misleading superlatives, commercial claims, or authority claims such as `官方`, `第一`, `国家级`, `最高级`, unless the user has proof or qualification.
-- Political, adult, violent, gambling, or other sensitive content.
-- Duplicate or highly similar names in the same category.
-- Broad generic names, hot-word piles, or names padded with symbols and letters only to avoid duplication.
+- 侵权、保护或易混淆的品牌词，例如 `微信`、`腾讯`、`抖音`、`Tencent`、`WeChat`、`QQ` 或大型平台名称，除非用户有明确权利或授权。
+- 误导性的最高级、商业承诺或权威声明，例如 `官方`、`第一`、`国家级`、`最高级`，除非用户有证明或资质。
+- 政治、成人、暴力、赌博或其他敏感内容。
+- 同类目中重复或高度相似的名称。
+- 宽泛泛类目名称、热词堆叠，或只为避开重名而填充的符号和字母。
 
-If a hot keyword is already crowded or unavailable, recommend more specific long-tail variants around the keyword rather than abandoning search intent. Keep every variant distinguishable, related to the real function, and reviewable under official rules.
+如果热门关键词已经拥挤或不可用，围绕该关键词推荐更具体的长尾变体，而不是放弃搜索意图。每个变体都要可区分、与真实功能相关，并能经受官方规则审核。
 
-## Output Format
+## 输出格式
 
-Return:
+返回：
 
-1. One-sentence job-to-be-done extracted from the user's background and functions.
-2. Keyword map with core keywords, action words, scenario words, problem/outcome words, and long-tail variants.
-3. Ranked name candidates in a table: name, naming strategy, rationale, score, risk.
-4. Best 3 choices with positioning notes.
-5. Suggested short names for the top choices when useful, ensuring each is taken from the full name in order and fits 4-10 characters.
-6. An intro draft using natural keyword coverage and a clear function statement.
-7. Backend verification checklist.
+1. 从用户背景和功能中提炼出的一句话用户任务。
+2. 关键词地图：核心关键词、动作词、场景词、问题/结果词和长尾变体。
+3. 排序后的候选名称表：名称、命名策略、理由、分数、风险。
+4. 最佳 3 个选择及定位说明。
+5. 对最优名称给出简称建议，确保简称从完整名称中按顺序截取，并符合 4-10 个字符限制。
+6. 一段自然覆盖关键词、清楚说明功能的简介文案。
+7. 后台核验清单。
 
-Keep advice direct. If an existing name is provided and unclear, say so plainly and explain which keyword is missing.
+建议保持直接。如果用户提供的已有名称不清楚，就明确指出，并说明缺失了哪个关键词。
 
-## Calibration Examples
+## 校准示例
 
-- `聚会摇骰喝酒`: put `摇骰子` first if that is the searched action; candidates should include `摇骰子聚会喝酒` or similar.
-- `黑熊去水印`: if the brand is not known, emphasize high-frequency terms such as `去水印`, `图片去水印`, `视频去水印`, and use `黑熊` as a suffix or matrix brand.
-- `拍食查卡`: infer photo calorie recognition, then shift toward `热量`, `卡路里`, `拍照识别热量`, or `食物热量查询`.
-- `鼾眠伴侣`: unclear from the name alone; rewrite from target-user words such as `打鼾`, `睡眠`, `鼾声记录`, or `止鼾`.
-- `时光星球`: unclear; require a function/scenario keyword before generating final candidates.
-- `拼豆Pic-图纸生成`: confirm it generates bead art patterns; research niche user keywords such as `拼豆图纸`, `拼豆模板`, `像素图`.
-- `恐慌贪婪指数`: add stronger market association such as `纳指`, `纳斯达克`, `美股`, or `Nasdaq`.
-- `旺你开心`: unclear; combine with the actual scenario and user goal instead of relying on emotional branding.
-- `爆塔AI`: if traffic is low despite competition, check whether the demand exists and whether the name-function match is explicit enough.
+- `聚会摇骰喝酒`：如果 `摇骰子` 是被搜索的动作，应把它前置；候选名称可包含 `摇骰子聚会喝酒` 或类似表达。
+- `黑熊去水印`：如果品牌不知名，应强调 `去水印`、`图片去水印`、`视频去水印` 等高频词，并把 `黑熊` 作为后缀或矩阵品牌。
+- `拍食查卡`：推断为拍照识别热量后，应转向 `热量`、`卡路里`、`拍照识别热量` 或 `食物热量查询`。
+- `鼾眠伴侣`：名称本身不清楚；应从目标用户词改写，例如 `打鼾`、`睡眠`、`鼾声记录` 或 `止鼾`。
+- `时光星球`：含义不清；生成最终候选前需要补充功能或场景关键词。
+- `拼豆图片-图纸生成`：确认它生成拼豆图案后，研究细分用户关键词，例如 `拼豆图纸`、`拼豆模板`、`像素图`。
+- `恐慌贪婪指数`：补充更强的市场关联词，例如 `纳指`、`纳斯达克` 或 `美股`。
+- `旺你开心`：含义不清；应结合真实场景和用户目标，而不是只依赖情绪化品牌表达。
+- `爆塔智能`：如果有竞争但流量低，应检查需求是否存在，以及名称和功能匹配是否足够明确。

@@ -1,4 +1,4 @@
 interface:
   display_name: "微信小程序起名"
-  short_description: "根据小程序背景和功能生成微信搜索友好的名称"
-  default_prompt: "Use $wechat-miniapp-name-generator to generate WeChat mini program names from my product background, functions, and solved problem."
+  short_description: "根据小程序背景、功能和用户搜索意图，生成微信搜索友好的名称"
+  default_prompt: "使用 $wechat-miniapp-name-generator，根据我的小程序背景、核心功能、目标用户和要解决的问题，生成微信搜索友好的小程序名称。"
